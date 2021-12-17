@@ -28,8 +28,8 @@ async function run(): Promise<void>{
   const fastForward = new FastForwardAction(client);
 
   const ff_status = await fastForward.async_merge_fast_forward(client,set_status);
-  await fastForward.async_comment_on_pr(client, comment_messages, ff_status, prod_branch, stage_branch);
-
+  // Add new comment to PR only if fast forward fails
+  if (!ff_status) await fastForward.async_comment_on_pr(client, comment_messages, ff_status, prod_branch, stage_branch);
 }
 
 run();

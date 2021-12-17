@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GitHubClientWrapper = void 0;
 var github_1 = require("@actions/github");
 var GitHubClientWrapper = /** @class */ (function () {
     function GitHubClientWrapper(context, githubToken) {
@@ -81,7 +82,7 @@ var GitHubClientWrapper = /** @class */ (function () {
                         return [4 /*yield*/, this.restClient.git.updateRef({
                                 owner: this.owner,
                                 repo: this.repo,
-                                ref: "heads/" + pullRequestData.base.ref,
+                                ref: "heads/".concat(pullRequestData.base.ref),
                                 sha: pullRequestData.head.sha,
                                 force: false
                             })];

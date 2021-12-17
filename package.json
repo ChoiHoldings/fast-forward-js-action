@@ -20,7 +20,10 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^2.1.0",
-    "@octokit/rest": "github:octokit/rest.js",
-    "@actions/http-client": ">=1.0.8"
+    "@actions/http-client": ">=1.0.8",
+    "@octokit/rest": "github:octokit/rest.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
   }
 }
